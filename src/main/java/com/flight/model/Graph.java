@@ -47,6 +47,16 @@ public class Graph {
         return null;
     }
 
+    public Airport findAirportBasedOnId(final String airportId) {
+        for (Airport airport : getAirports()) {
+            if (airport.getId().equalsIgnoreCase(airportId)) {
+                return airport;
+            }
+        }
+        return null;
+    }
+
+
     @Override
     public String toString() {
         return "\nRoutes :" + routes + "";
